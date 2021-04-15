@@ -18,8 +18,8 @@ RUN pip install poetry==$POETRY_VERSION
 
 WORKDIR /www
 
-COPY pyproject.toml poetry.lock www/
+ADD pyproject.toml poetry.lock www/
 
-COPY . .
+ADD . .
 
 RUN poetry install
