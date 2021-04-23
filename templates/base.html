@@ -1,11 +1,53 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="{% static 'css/globalstyles.css' %}">
+  {% block css %}{% endblock css %}
+    
   <title>{% block title %}Home{% endblock title %}</title>
 </head>
 <body>
+  <header>
+    <div class="container">
+      <section>
+        <a href="#"><img src="{% static 'assets/logo.svg' %}" alt="Logo"></a>
+        <input type="search" name="search" id="search" placeholder="Buscar produto...">
+        <nav>
+          <ul>
+            {% if user.is_authenticated %}
+              <li><a href="#">Sair</a></li>
+            {% else %}
+              <li><a href="#">Entrar</a></li>
+              <li><a href="#">Cadastrar</a></li>
+            {% endif %}
+          </ul>
+        </nav>
+      </section>
+    </div><!-- .container -->
+  </header>
+    
+  <section class="content">
+    <div class="container">
+      {% block content %}
+      
+      {% endblock content %}
+    </div>
+  </section>
+
+  <footer>
+    Copyright 2021
+  </footer>
+
   
+  {% block scripts %}{% endblock scripts %}
+    
 </body>
 </html>

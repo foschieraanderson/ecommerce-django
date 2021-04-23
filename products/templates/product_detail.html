@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'products/css/styles.css' %}">
+{% endblock css %}
+
+{% block title %} Nome do produto {% endblock title %}
+
+{% block content %}
+<section class="box-content-detail">
+    <div class="box-gallery">
+        <div id="image">
+            <img src="{% static 'products/assets/teclado.png' %}" alt="">
+        </div>
+        <ul class="thumbnails">
+            <li class="thumb">
+                <img src="{% static 'products/assets/monitor.png' %}" alt="">
+            </li>
+            <li class="thumb">
+                <img src="{% static 'products/assets/mouse.png' %}" alt="">
+            </li>
+        </ul>
+    </div>
+    <div class="box-info">
+
+    </div>
+</section>
+{% endblock content %}
+
+{% block scripts %}{% endblock scripts %}

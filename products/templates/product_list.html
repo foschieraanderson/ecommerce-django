@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'products/css/styles.css' %}">
+{% endblock css %}
+
+{% block title %} Produtos {% endblock title %}
+
+{% block content %}
+<section class="box-content">
+    <menu>
+        <h2>Categorias</h2>
+        <ul>
+            <li>
+                <a href="#">Primeira <span>+</span></a>
+            </li>
+            <li>
+                <a href="#">Segunda <span>+</span></a>
+            </li>
+            <li>
+                <a href="#">Terceira <span>+</span></a>
+            </li>
+        </ul>
+    </menu>
+    <div class="products">
+        <div class="products-list">
+            <div class="products-item">
+                <div class="box-img">
+                    <img src="{% static 'products/assets/teclado.png' %}" alt="Teclado Mecânico Redragon">
+                </div>
+                <h3>Teclado Mecânico Redragon</h3>
+                <p>R$ 299,99</p>
+                <a href="#">Ver Produto</a>
+            </div>
+
+            <div class="products-item">
+                <div class="box-img">
+                    <img src="{% static 'products/assets/monitor.png' %}" alt="Monitor Gamer Legion">
+                </div>
+                <h3>Monitor Gamer Legion</h3>
+                <p>R$ 2.699,99</p>
+                <a href="#">Ver Produto</a>
+            </div>
+
+            <div class="products-item">
+                <div class="box-img">
+                    <img src="{% static 'products/assets/mouse.png' %}" alt="Mouse Razer Naga Hex V2 Chroma">
+                </div>
+                <h3>Mouse Razer Naga Hex V2 Chroma</h3>
+                <p>R$ 188,90</p>
+                <a href="#">Ver Produto</a>
+            </div>
+
+            <div class="products-item">
+                <div class="box-img">
+                    <img src="{% static 'products/assets/monitor.png' %}" alt="Monitor Gamer Legion">
+                </div>
+                <h3>Monitor Gamer Legion</h3>
+                <p>R$ 2.699,99</p>
+                <a href="#">Ver Produto</a>
+            </div>
+
+            <div class="products-item">
+                <div class="box-img">
+                    <img src="{% static 'products/assets/mouse.png' %}" alt="Mouse Razer Naga Hex V2 Chroma">
+                </div>
+                <h3>Mouse Razer Naga Hex V2 Chroma</h3>
+                <p>R$ 188,90</p>
+                <a href="#">Ver Produto</a>
+            </div>
+
+            <div class="products-item">
+                <div class="box-img">
+                    <img src="{% static 'products/assets/teclado.png' %}" alt="Teclado Mecânico Redragon">
+                </div>
+                <h3>Teclado Mecânico Redragon</h3>
+                <p>R$ 299,99</p>
+                <a href="#">Ver Produto</a>
+            </div>
+            
+        </div>
+        <div class="paginate">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+    
